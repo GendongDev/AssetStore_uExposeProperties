@@ -163,7 +163,8 @@ namespace com.rmc.projects.uxp_demo
 		/// </summary>
 		private void _doRefreshProperties() 
 		{
-			
+
+			Debug.Log ("Rect: " + _viewportBoundary_rect);
 			
 		}
 

@@ -170,14 +170,29 @@ namespace com.unity3d.wiki.expose_properties
 				case SerializedPropertyType.Enum:
 					field.SetValue(EditorGUILayout.EnumPopup(field.Name, (Enum)field.GetValue(), emptyOptions));
 					break;
-					
-					//NEW
+
+				/*
+				 * SRIVELLO
+				 * 
+				 * #1. ADD NEW DATA TYPES JUST BELOW THIS ONE
+				 * 
+				 **/
 				case SerializedPropertyType.Rect:
 					field.SetValue(EditorGUILayout.RectField(field.Name, (Rect)field.GetValue(), emptyOptions));
 					break;
 					
 				default:
-					
+
+
+					/*
+					 * SRIVELLO
+					 * 
+					 * #2. IF YOU EVER REACH THIS ERROR, SEE #1 ABOVE
+					 * 
+					 **/
+					#pragma warning disable 0162
+					throw new NotImplementedException();
+					#pragma warning restore 0162
 					break;
 					
 				}
