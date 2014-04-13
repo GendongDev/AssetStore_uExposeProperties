@@ -59,73 +59,26 @@ namespace com.rmc.projects.uxp_demo
 		//  Properties
 		//--------------------------------------
 		
-		//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-		//\ 
-		//\ uExposePropertites Examples
-		//\ 
-		//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 		/// <summary>
 		/// Sample Float
 		/// </summary>
 		[SerializeField][HideInInspector]
-		private float _distanceMaximum_float = 15;
+		private float _justAnotherExampleNumber_float = 15;
 		[ExposeProperty]
-		public float distanceMax {
+		public float justAnotherExampleNumber {
 			get{
-				return _distanceMaximum_float;
+				return _justAnotherExampleNumber_float;
 			}
 			set{
 
-				_distanceMaximum_float = Mathf.Clamp (value, _distanceMinimum_float, Mathf.Infinity) ;
-				
-				//
-				_doRefreshProperties();
+				_justAnotherExampleNumber_float = value;
+
+				//SHOW THE VALUE FOR TESTING
+				//Debug.Log ("justAnotherExampleNumber: " + justAnotherExampleNumber);
 
 			}
 		}
 
-		/// <summary>
-		/// Sample Float
-		/// </summary>
-		[SerializeField][HideInInspector]
-		private float _distanceMinimum_float = 15;
-		[ExposeProperty]
-		public float distanceMinimum {
-			get{
-				return _distanceMinimum_float;
-			}
-			set{
-				
-				_distanceMaximum_float = Mathf.Clamp (value, _distanceMinimum_float, Mathf.Infinity) ;
-				
-				//
-				_doRefreshProperties();
-				
-			}
-		}
-
-
-
-		/// <summary>
-		/// The _viewport bounds_rect.
-		/// </summary>
-		[SerializeField][HideInInspector] 
-		private Rect _viewportBoundary_rect = new Rect (-30, -35, 60, 70);
-		[ExposeProperty]
-		public Rect viewportBoundary {
-			get{
-				return _viewportBoundary_rect;
-			}
-			set{
-				_viewportBoundary_rect = value;
-				
-				//
-				_doRefreshProperties();
-
-			}
-		}
 
 		//--------------------------------------
 		//  Methods
@@ -149,38 +102,12 @@ namespace com.rmc.projects.uxp_demo
 		{
 
 
-		}
 
-
-		//	PRIVATE 
-		/// <summary>
-		/// 
-		/// Refresh properties.
-		/// 
-		/// NOTE: This is not a required pattern for UEXP
-		/// NOTE: This is recommended when you have many interdependent properties, for cleaner code
-		/// 
-		/// </summary>
-		private void _doRefreshProperties() 
-		{
-
-			Debug.Log ("Rect: " + _viewportBoundary_rect);
-			
 		}
 
 		//--------------------------------------
 		//  Events
 		//--------------------------------------
-		/// <summary>
-		/// Raises the enable event.
-		/// </summary>
-		public void OnEnable ()
-		{
-
-			//REFRESH PRIORITY
-			_doRefreshProperties();
-		}
-
 
 	}
 
