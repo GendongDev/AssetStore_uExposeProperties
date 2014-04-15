@@ -34,6 +34,9 @@ using com.rmc.projects.uep_demo;
 //--------------------------------------
 //  Namespace
 //--------------------------------------
+using UnityEngine;
+
+
 namespace com.rmc.projects.uep_demo
 {
 	
@@ -96,16 +99,16 @@ namespace com.rmc.projects.uep_demo
 		/// </summary>
 		public override void OnInspectorGUI () 
 		{
-			
+
 			if ( targetStronglyTyped == null ){
 				return;
 			}
 			
 			this.DrawDefaultInspector();
-			
 			ExposeProperties.Expose( propertyField_array );
 			
 		}
+
 	}
 }
 

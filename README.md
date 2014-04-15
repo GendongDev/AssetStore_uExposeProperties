@@ -5,4 +5,4 @@ A demo of a custom solution to expose properties (setter/getter) to the inspecto
 
 See related article;
 
-* TBD
+* http://www.rivellomultimediaconsulting.com/unity3d-asset-store-uep/

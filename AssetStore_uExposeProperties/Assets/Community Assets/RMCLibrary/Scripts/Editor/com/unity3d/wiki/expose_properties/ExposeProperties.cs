@@ -131,7 +131,7 @@ namespace com.unity3d.wiki.expose_properties
 		/// <param name="properties">Properties.</param>
 		public static void Expose( PropertyField[] properties )
 		{
-			
+
 			GUILayoutOption[] emptyOptions = new GUILayoutOption[0];
 			
 			EditorGUILayout.BeginVertical( emptyOptions );
