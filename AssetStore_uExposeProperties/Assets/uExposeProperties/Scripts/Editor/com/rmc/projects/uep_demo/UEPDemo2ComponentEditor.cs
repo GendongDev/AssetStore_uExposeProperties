@@ -29,12 +29,12 @@
 //--------------------------------------
 using UnityEditor;
 using com.unity3d.wiki.expose_properties;
-using com.rmc.projects.uxp_demo;
+using com.rmc.projects.uep_demo;
 
 //--------------------------------------
 //  Namespace
 //--------------------------------------
-namespace com.rmc.projects.uxp_demo
+namespace com.rmc.projects.uep_demo
 {
 	
 	//--------------------------------------
@@ -50,8 +50,8 @@ namespace com.rmc.projects.uxp_demo
 	//--------------------------------------
 	//  Class
 	//--------------------------------------
-	[CustomEditor( typeof( UEPDemo1Component ) )]
-	public class UEPDemo1ComponentEditor : Editor 
+	[CustomEditor( typeof( UEPDemo2Component ) )]
+	public class UEPDemo2ComponentEditor : Editor 
 	{
 		
 		//--------------------------------------
@@ -63,10 +63,10 @@ namespace com.rmc.projects.uxp_demo
 		//  Properties
 		//--------------------------------------
 		/// <summary>
-		/// The target
+		/// The tracking camera component.
 		/// </summary>
-		UEPDemo1Component targetStronglyTyped;
-		
+		UEPDemo2Component targetStronglyTyped;
+
 		/// <summary>
 		/// The property field_array.
 		/// </summary>
@@ -75,9 +75,7 @@ namespace com.rmc.projects.uxp_demo
 		
 		//--------------------------------------
 		//  Methods
-		//--------------------------------------	
-
-
+		//--------------------------------------		
 		
 		//--------------------------------------
 		//  Events
@@ -87,12 +85,12 @@ namespace com.rmc.projects.uxp_demo
 		/// </summary>
 		public void OnEnable()
 		{
-			targetStronglyTyped = target as UEPDemo1Component;
+			targetStronglyTyped = target as UEPDemo2Component;
 			propertyField_array = ExposeProperties.GetProperties( targetStronglyTyped );
 		}
-		
+
 		/// <summary>
-		/// Raises the inspector GUI event.
+		/// Raises the inspector GU event.
 		/// </summary>
 		public override void OnInspectorGUI () 
 		{

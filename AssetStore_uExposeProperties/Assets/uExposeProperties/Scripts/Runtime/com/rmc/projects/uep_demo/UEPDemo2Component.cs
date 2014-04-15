@@ -33,7 +33,7 @@ using com.unity3d.wiki.expose_properties;
 //--------------------------------------
 //  Namespace
 //--------------------------------------
-namespace com.rmc.projects.uxp_demo
+namespace com.rmc.projects.uep_demo
 {
 	
 	//--------------------------------------
